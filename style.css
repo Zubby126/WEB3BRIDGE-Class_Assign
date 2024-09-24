@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #3f4a55;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(Assets/girl-.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+.nav-bar{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 8rem;
+    height: 7rem;
+}
+
+.nav-link{
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+input{
+    width: 15rem;
+    height: 2rem;
+    border: 0.15rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 1.2rem 1rem;
+    font-size: 1.3rem;
+}
+
+input:focus{
+    outline: var(--primary-color)
+}
+/* Utilities */
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
