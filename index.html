@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 </head>
 <body>
     <header class="container">
@@ -21,23 +21,46 @@
                 <li><a href="#">Services</a> </li>
                 <li><a href="#">Contact</a> </li>
             </ul>
-            <div>
-                <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="search-div">
+                <a href="#"><i class="fa fa-search fa-1.8x" aria-hidden="true"></i></a>
                 <input type="text" name="search"  placeholder="Search here..." />
             </div>
             
         </nav>
     </header>
-    <main>
+
+    <main class="main flex">
 
         <section class="text-section">
             <p>Hello, It's Me</p>
             <h1>Ebubedike Nzube Edwin</h1>
-            <p>And I'm a Frontend, Developer</p>
-            <input type="button" name="about-me" class="about" />
-            <input type="button" name="follow-me" class="follow" />
+
+            <div class="animated-text">
+                <p>I am a <span></span>
+                </p> 
+            </div>
+            
+            
+            <div class="btn-submit flex">
+                <button>About Me</button>
+                <button>Follow Me</button>
+            </div>
+            
         </section>
         
+        <section class="footer flex">
+            <div class="side-image">
+                <img src="Assets/girl-.png" alt="Mans-image" />
+            </div>
+            
+            <div class="social-icons flex">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </div>
+            
+        </section>
     </main>
     <footer></footer>
 </body>

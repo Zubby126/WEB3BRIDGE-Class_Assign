@@ -9,15 +9,32 @@
 
 :root{
     --primary-color: #3f4a55;
+    --text-bg-color: #d7faf6;
+    --anima-text-color: #26ddd0;
 }
+
+/* Utilities */
+.flex{
+    display: flex;
+}
+
+a{
+    color: var(--primary-color);
+}
+
 
 body{
     height: 100vh;
     width: 100vw;
-    /* background-image: url(Assets/girl-.png); */
+    background-image: url(Assets/background.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: left;
+}
+
+main{
+    justify-content: space-between;
+    padding-right: 2rem;
 }
 
 .nav-bar{
@@ -27,6 +44,7 @@ body{
     color: var(--primary-color);
     justify-content: center;
     align-items: center;
+    justify-content: space-around;
 }
 
 .logo{
@@ -44,22 +62,134 @@ body{
     color: var(--primary-color);
 }
 
-input{
-    width: 15rem;
-    height: 2rem;
+.nav-link li a:hover{
+    color: #0a0a0a;
+}
+
+.search-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1rem;
+    background-color: #f2f2f2;
     border: 0.15rem solid var(--primary-color);
     border-radius: 0.5rem;
-    padding: 1.2rem 1rem;
-    font-size: 1.3rem;
+}
+
+i{
+    border-right: .16rem solid var(--primary-color);
+    padding: 0 .5rem;
+    height: 1.3rem;
+}
+
+input[type='text']{
+    font-size: 1.2rem;
+    border: none;
+    padding: .3rem .3rem;
+    background-color: #f2f2f2;
 }
 
 input:focus{
-    outline: var(--primary-color)
-}
-/* Utilities */
-.flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    outline: none
 }
 
+.text-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 25rem;
+    width: 28rem;
+    margin-left: 4rem;
+    padding-left: 3rem;
+}
+
+
+.text-section:nth-child(1){
+    font-size: 1.6875rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.text-section h1{
+    color: var(--primary-color);
+    font-size: 4.6875rem;
+    font-weight: 600;
+    line-height: normal;
+    width: 50rem;
+}
+
+.animated-text{
+   font-size: 2.5rem; 
+   font-weight: 600px;
+   min-width: 27rem;
+}
+
+.animated-text span{
+    position: relative;
+    animation: word 20% infinite;
+
+}
+
+.animated-text span::before{
+    content: "Frontend Developer";
+    color: var(--anima-text-color);
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    border-left: .2rem solid var(--anima-text-color);
+    right: -8px;
+    animation: cursor .7s infinite;
+}
+
+@keyframes cursor{
+    to{
+       border-left: 5px solid rgb(63, 55, 55); 
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "Frontend, Developer";
+    }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+}
+
+.btn-submit{
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 0 0 3rem;
+    gap: 1.4rem;
+}
+
+.btn-submit button{
+    padding: .9rem 1.7rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--text-bg-color);
+    background-image: linear-gradient(to right, #2ff3dd, #a667c8);
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(.94);
+}
+
+.footer{
+    flex-direction: row;
+}
+
+.social-icons{
+    flex-direction: column;
+    justify-content:flex-end;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
